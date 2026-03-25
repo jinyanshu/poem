@@ -1,9 +1,8 @@
 //variables
-let bg;
-//variable for background image
+var bg;
 
 function preload() {
-  bg = loadImage("1.jpeg");
+  bg = image("1.jpeg");
 }
 
 function setup() {
@@ -13,8 +12,4 @@ function setup() {
 function draw() {
   //background
   image(bg, 0, 0, width, height);
-
-  fill("#E8C0A0");
-  noStroke();
-  ellipse(width / 2, height / 2, 225, 300);
 }
