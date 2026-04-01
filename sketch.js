@@ -1,8 +1,8 @@
 //variables
-var 1gif;
+var one;
 
 function preload() {
-  1gif = loadImage("images/1gif.gif");
+  one = loadImage("images/one.gif");
 }
 
 function setup() {
@@ -12,5 +12,5 @@ function setup() {
 
 function draw() {
   //background
-  image(1gif, 0, 0, windowWidth, windowHeight);
+  image(one, 0, 0, windowWidth, windowHeight);
 }
