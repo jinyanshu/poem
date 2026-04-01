@@ -12,5 +12,5 @@ function setup() {
 
 function draw() {
   //background
-  image(bg, 0, 0, windowWidth, windowHeight);
+  image(1gif, 0, 0, windowWidth, windowHeight);
 }
