@@ -2,7 +2,7 @@
 var bg;
 
 function preload() {
-  bg = loadImage("/images/1.jpeg");
+  bg = loadImage("images/1.jpeg");
 }
 
 function setup() {
