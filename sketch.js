@@ -2,14 +2,15 @@
 var bg;
 
 function preload() {
-  bg = image("1.jpeg");
+  bg = loadImage("/images/1.jpeg");
 }
 
 function setup() {
-  createCanvas(width, height);
+  createCanvas(windowWidth, windowHeight);
+  background("green");
 }
 
 function draw() {
   //background
-  image(bg, 0, 0, width, height);
+  image(bg, 0, 0, windowWidth, windowHeight);
 }
