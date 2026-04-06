@@ -1,9 +1,9 @@
 //variables
-var two_loadImg, two_createImg;
+var three_loadImg, three_createImg;
 
 function preload() {
-  two_loadImage = loadImage("images/2gif.gif");
-  two_createImg = createImg("images/2gif.gif");
+  three_loadImage = loadImage("images/3gif.gif");
+  three_createImg = createImg("images/3gif.gif");
 }
 
 function setup() {
