@@ -1,8 +1,9 @@
 //variables
-var one;
+var one, one1;
 
 function preload() {
   one = loadImage("images/one.gif");
+  one1 = createImage("images/one.gif");
 }
 
 function setup() {
