@@ -3,7 +3,6 @@ var one;
 
 function preload() {
   one = loadImage("images/one.gif");
-  one = createImg("images/one.gif");
 }
 
 function setup() {
