@@ -3,12 +3,11 @@ var one;
 
 function preload() {
   one = loadImage("images/one.gif");
-  one = createImage("images/one.gif");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background("black");
+  background("white");
 }
 
 function draw() {
