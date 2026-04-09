@@ -13,7 +13,7 @@ function setup() {
 function draw() {
   //background
     // Create a p5 element for the background image and add width and height as methods. This allows it to always cover the canvas 
-  let imgRatio = bgImg.width / bgImg.height;
+  let imgRatio = one.width / one.height;
     // here you define the aspect ratio of the canvas
   let canvasRatio = width / height;
     // here you are creating variables that can be used to adjust the background image to the canvas ratio
