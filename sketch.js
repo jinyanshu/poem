@@ -41,8 +41,8 @@ function draw() {
   image(one, drawX, drawY, drawW, drawH);
   
  //previous and next buttons appear
-  image (previous, 0, 0);
-  image (next, 0, 0, 125, 100);
+  image (previous, 0, 0, 125, 100);
+  image (next, 300, 300, 125, 100);
 
   // poem appears here
   
