@@ -41,12 +41,13 @@ function draw() {
   
   //draws the image to align with the center and be as tall as the width and height of the canvas
   image(two, drawX, drawY, drawW, drawH);
+
+  //previous and next buttons appear
+image (previous, 100, 100);
   
   // poem appears here
   
 }
-//previous and next buttons appear
-image (previous, 100, 100);
 
 //this resizes the canvas to the width and height of the browser window
 function windowResized() {
