@@ -40,7 +40,8 @@ function draw() {
   drawY = (height - drawH) / 2;
   
   //previous and next buttons appear
-image (previous, 100, 100);
+  image (previous, 100, 100, 50, 50);
+  image (next, 500, 500, 50, 50)
 
   //draws the image to align with the center and be as tall as the width and height of the canvas
   image(two, drawX, drawY, drawW, drawH);
