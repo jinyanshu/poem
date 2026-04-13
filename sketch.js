@@ -3,7 +3,7 @@ var one, previous, next;
 
 function preload() {
   one = loadImage("images/one.gif");
-  previous = loadImage("images/previous.gif");
+  //previous = loadImage("images/previous.gif");
   next = loadImage("images/next.gif");
 }
 
@@ -12,6 +12,8 @@ function setup() {
   background("white");
 
   //previous and next interaction
+  //link = createA('two.html', '<img src="images/next.gif" alt="next">');
+  //link.position(width-150, height-125);
 }
 
 function draw() {
@@ -43,7 +45,7 @@ function draw() {
   image(one, drawX, drawY, drawW, drawH);
   
  //previous and next buttons appear
-  image (previous, 0, 0, 150, 125);
+ // image (previous, 0, 0, 150, 125);
   image (next, width-150, height-125, 150, 125);
 
   // poem appears here
