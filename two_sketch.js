@@ -46,6 +46,7 @@ function draw() {
   
 }
 //previous and next buttons appear
+  imageMode(CORNER);
   if ((mouseX <= 200) && (mouseY <= 200)) {
     image(previous, 0, 0);   // Upper-left
    }
