@@ -1,8 +1,12 @@
 //variables
 var two;
+var previous;
+var next;
 
 function preload() {
   two = loadImage("images/2gif.gif");
+  previous = loadImage("images/previous.gif");
+  next = loadImage("images/next.gif");
 }
 
 function setup() {
@@ -41,6 +45,13 @@ function draw() {
   // poem appears here
   
 }
+//previous and next buttons appear
+  if ((mouseX <= 200) && (mouseY <= 200)) {
+    image(previous, 0, 0);   // Upper-left
+  }
+  else {
+    image(next, 200, 200); // Lower-right
+  }
 
 //this resizes the canvas to the width and height of the browser window
 function windowResized() {
