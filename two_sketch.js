@@ -47,17 +47,6 @@ function draw() {
 }
 //previous and next buttons appear
 image (previous, 100, 100);
-  if (mouseIsPressed) {
-    click();
-  }
-
-function click() {
-  let button = dist(mouseX, mouseY, previous.x, previous.y);
-  if (button <= 50) {
-
-   window.open("two.html")
-  }
-}
 
 //this resizes the canvas to the width and height of the browser window
 function windowResized() {
