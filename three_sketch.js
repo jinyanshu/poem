@@ -1,8 +1,10 @@
 //variables
-var three;
+var three, previous, next;
 
 function preload() {
   three = loadImage("images/3gif.gif");
+  previous = loadImage("images/previous.gif");
+  next = loadImage("images/next.gif");
 }
 
 function setup() {
@@ -38,6 +40,10 @@ function draw() {
   //draws the image to align with the center and be as tall as the width and height of the canvas
   image(three, drawX, drawY, drawW, drawH);
   
+  //previous and next buttons appear
+  image (previous, 0, 0, 125, 100);
+  image (next, 300, 300, 125, 100);
+
   // poem appears here
   
 }
