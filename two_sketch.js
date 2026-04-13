@@ -48,6 +48,12 @@ function draw() {
 //previous and next buttons appear
   if ((mouseX <= 200) && (mouseY <= 200)) {
     image(previous, 0, 0);   // Upper-left
+   }
+  else if ((mouseX <= 200) && (mouseY > 200)) {
+    image(previous, 0, 200);  // Lower-left
+  }
+  else if ((mouseX > 200) && (mouseY <= 200)) {
+    image(next, 200, 0);  // Upper-right
   }
   else {
     image(next, 200, 200); // Lower-right
