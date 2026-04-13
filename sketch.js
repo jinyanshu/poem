@@ -28,7 +28,7 @@ function draw() {
     drawH = height;
     drawW = height * imgRatio;
 
-    //  image(one, 0, 0, windowWidth, windowHeight);
+    //  image(var, 0, 0, windowWidth, windowHeight);
 }
 
 // centers the image to the canvas
