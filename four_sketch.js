@@ -42,7 +42,7 @@ function draw() {
   
  //previous and next buttons appear
   image (previous, 0, 0, 125, 100);
-  image (next, 300, 300, 125, 100);
+  image (next, width-125, height-100, 125, 100);
 
   // poem appears here
   
