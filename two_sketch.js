@@ -4,7 +4,9 @@ var two, previous, next;
 function preload() {
   two = loadImage("images/2gif.gif");
   previous = loadImage("images/previous.gif");
+  previous = createImage("images/previous.gif");
   next = loadImage("images/next.gif");
+  next = createImage("images/next.gif");
 }
 
 function setup() {
