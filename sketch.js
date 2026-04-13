@@ -38,9 +38,8 @@ function draw() {
   //draws the image to align with the center and be as tall as the width and height of the canvas
   image(one, drawX, drawY, drawW, drawH);
   
-  // YOur content would go here
-  fill(255);
-  ellipse(width / 2, height / 2, width * 0.1);
+  // poem appears here
+  
 }
 
 //this resizes the canvas to the width and height of the browser window
