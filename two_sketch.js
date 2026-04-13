@@ -46,19 +46,18 @@ function draw() {
   
 }
 //previous and next buttons appear
-  imageMode(CORNER);
-  if ((mouseX <= 200) && (mouseY <= 200)) {
-    image(previous, 0, 0);   // Upper-left
-   }
-  else if ((mouseX <= 200) && (mouseY > 200)) {
-    image(previous, 0, 200);  // Lower-left
+image (previous, 100, 100);
+  if (mouseIsPressed) {
+    click();
   }
-  else if ((mouseX > 200) && (mouseY <= 200)) {
-    image(next, 200, 0);  // Upper-right
+
+function click() {
+  let button = dist(mouseX, mouseY, previous.x, previous.y);
+  if (button <= 50) {
+
+   window.open("two.html")
   }
-  else {
-    image(next, 200, 200); // Lower-right
-  }
+}
 
 //this resizes the canvas to the width and height of the browser window
 function windowResized() {
