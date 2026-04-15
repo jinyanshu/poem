@@ -1,5 +1,5 @@
 //variables
-var one, previous, next;
+var one, next;
 
 function preload() {
   one = loadImage("images/one.gif");
