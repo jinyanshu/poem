@@ -1,10 +1,10 @@
-//variables
-var one, next;
+var one, onestill, next, nextstill; //variables
 
 function preload() {
-  one = loadImage("images/one.gif");
-  //previous = loadImage("images/previous.gif");
-  next = loadImage("images/next.gif");
+  one = loadImage("images/one.gif"); //gif main image
+  onestill = loadImage("images/1.jpeg"); //still main image
+  next = loadImage("images/next.gif"); //gif next button
+  nextstill = loadImage("images/nextstill.png"); //still next button
 }
 
 function setup() {
@@ -19,7 +19,7 @@ function setup() {
 function draw() {
   //background
     // Create a p5 element for the background image and add width and height as methods. This allows it to always cover the canvas 
-  let imgRatio = one.width / one.height;
+  let imgRatio = onestill.width / onestill.height;
     // here you define the aspect ratio of the canvas
   let canvasRatio = width / height;
     // here you are creating variables that can be used to adjust the background image to the canvas ratio
@@ -41,15 +41,20 @@ function draw() {
   drawX = (width - drawW) / 2;
   drawY = (height - drawH) / 2;
   
-  //draws the image to align with the center and be as tall as the width and height of the canvas
+  image(onestill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
+   if (mouseX > 700 && mouseX < 1500 && mouseY > 500 && mouseY < 800) //animation on hover
   image(one, drawX, drawY, drawW, drawH);
-  
- //previous and next buttons appear
- // image (previous, 0, 0, 150, 125);
-  image (next, width-150, height-125, 150, 125);
+
+  //image (nextstill, width-150, height-125, 150, 125); //next button
+   if (mouseX > 1700 && mouseX < 2000 && mouseY > 700 && mouseY < 1000) //animation on hover
+   image(next, width-150, height-125, 150, 125);
+
 
   // poem appears here
   
+//textSize(24);
+//text("X: "+mouseX, 0, height/4);
+//text("Y: "+mouseY, 0, height/2);
 }
 
 //this resizes the canvas to the width and height of the browser window
