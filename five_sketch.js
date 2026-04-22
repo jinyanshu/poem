@@ -5,7 +5,7 @@ function preload() {
   five = loadImage("images/5gif.gif");
   fivestill = loadImage("images/5.jpeg");
   first = loadImage("5poemtext/5the.gif");
-  second = loadImage("5poemtext/5dont");
+  second = loadImage("5poemtext/5dont.gif");
   previous = loadImage("images/previous.gif");
 }
 
@@ -40,6 +40,8 @@ function draw() {
   drawY = (height - drawH) / 2;
   
   //draws the image to align with the center and be as tall as the width and height of the canvas
+  image(fivestill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
+  if (mouseX > 700 && mouseX < 1220 && mouseY > 320 && mouseY < 780) //animation on hover
   image(five, drawX, drawY, drawW, drawH);
   
  //previous button appears
@@ -47,12 +49,16 @@ function draw() {
   image (previous, 0, 0, 150, 125); //previous button appears
 
   // poem appears here
-  
+    if (mouseX > 500 && mouseX < 1460 && mouseY > 0 && mouseY < 125) //animation on hover
+  image(first, drawX, drawY, drawW, drawH); //first line poem appears
+  if (mouseX > 500 && mouseX < 1460 && mouseY > 130 && mouseY < 250) //animation on hover
+  image(second, drawX, drawY, drawW, drawH); //second line poem appears
 
-   //coords
-textSize(24);
-text("X: "+mouseX, 0, height/4);
-text("Y: "+mouseY, 0, height/2);
+
+//coords
+//textSize(24);
+//text("X: "+mouseX, 0, height/4);
+//text("Y: "+mouseY, 0, height/2);
 }
 
 //this resizes the canvas to the width and height of the browser window

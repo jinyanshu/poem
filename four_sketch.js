@@ -41,6 +41,8 @@ function draw() {
   drawY = (height - drawH) / 2;
   
   //draws the image to align with the center and be as tall as the width and height of the canvas
+  image(fourstill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
+  if (mouseX > 730 && mouseX < 1150 && mouseY > 250 && mouseY < 580) //animation on hover
   image(four, drawX, drawY, drawW, drawH);
   
  //previous and next buttons appear
@@ -50,12 +52,15 @@ function draw() {
   image(next, width-150, height-125, 150, 125); //next button appears
 
   // poem appears here
-  
+  if (mouseX > 630 && mouseX < 1300 && mouseY > 0 && mouseY < 200) //animation on hover
+  image(first, drawX, drawY, drawW, drawH); //first line poem appears
+  if (mouseX > 700 && mouseX < 1240 && mouseY > 645 && mouseY < 850) //animation on hover
+  image(second, drawX, drawY, drawW, drawH); //second line poem appears
 
-   //coords
-textSize(24);
-text("X: "+mouseX, 0, height/4);
-text("Y: "+mouseY, 0, height/2);
+//coords
+//textSize(24);
+//text("X: "+mouseX, 0, height/4);
+//text("Y: "+mouseY, 0, height/2);
 }
 
 //this resizes the canvas to the width and height of the browser window
