@@ -59,6 +59,19 @@ function draw() {
 //textSize(24);
 //text("X: "+mouseX, 0, height/4);
 //text("Y: "+mouseY, 0, height/2);
+
+
+//previous page link
+if (mouseIsPressed) {
+  back();
+}
+}
+//function to go to previous page
+function back(){
+  let button = dist(mouseX, mouseY, 0, 150); 
+  if (button <= 150) {
+    window.open('four.html', '_self')
+  }
 }
 
 //this resizes the canvas to the width and height of the browser window

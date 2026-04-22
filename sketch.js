@@ -48,9 +48,8 @@ function draw() {
    if (mouseX > 700 && mouseX < 1500 && mouseY > 500 && mouseY < 800) //animation on hover
   image(one, drawX, drawY, drawW, drawH);
 
-  //image (nextstill, width-150, height-125, 150, 125); //next button
-   if (mouseX > 1700 && mouseX < 2000 && mouseY > 700 && mouseY < 1000) //animation on hover
-   image(next, width-150, height-125, 150, 125); //next button appears
+  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
+  image(next, width/1.1, height/1.2, 150, 125); //next button appears
 
 
   // poem appears here
@@ -65,6 +64,19 @@ function draw() {
 //textSize(24);
 //text("X: "+mouseX, 0, height/4);
 //text("Y: "+mouseY, 0, height/2);
+
+//next page link
+if (mouseIsPressed) {
+  go();
+}
+}
+
+//function to go to next page
+function go(){
+  let button = dist(mouseX, mouseY, width/1.1, height/1.1); 
+  if (button <= 100) {
+    window.open('two.html', '_self')
+  }
 }
 
 //this resizes the canvas to the width and height of the browser window
