@@ -1,10 +1,12 @@
 //variables
-var five, previous, next;
+var five, fivestill, second, first, previous;
 
 function preload() {
   five = loadImage("images/5gif.gif");
+  fivestill = loadImage("images/5.jpeg");
+  first = loadImage("5poemtext/5the.gif");
+  second = loadImage("5poemtext/5dont");
   previous = loadImage("images/previous.gif");
-  next = loadImage("images/next.gif");
 }
 
 function setup() {
@@ -40,12 +42,17 @@ function draw() {
   //draws the image to align with the center and be as tall as the width and height of the canvas
   image(five, drawX, drawY, drawW, drawH);
   
- //previous and next buttons appear
-  image (previous, 0, 0, 150, 125);
-  image (next, width-150, height-125, 150, 125);
+ //previous button appears
+  if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
+  image (previous, 0, 0, 150, 125); //previous button appears
 
   // poem appears here
   
+
+   //coords
+textSize(24);
+text("X: "+mouseX, 0, height/4);
+text("Y: "+mouseY, 0, height/2);
 }
 
 //this resizes the canvas to the width and height of the browser window

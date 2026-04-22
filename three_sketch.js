@@ -1,10 +1,13 @@
 //variables
-var three, previous, next;
+var three, threestill, first, second, previous, next;
 
 function preload() {
   three = loadImage("images/3gif.gif");
+  threestill = loadImage("images/3.jpeg");
   previous = loadImage("images/previous.gif");
   next = loadImage("images/next.gif");
+  first = loadImage("3poemtext/3fert.gif");
+  second = laodImage("3poemtext/3let.gif");
 }
 
 function setup() {
@@ -40,12 +43,19 @@ function draw() {
   //draws the image to align with the center and be as tall as the width and height of the canvas
   image(three, drawX, drawY, drawW, drawH);
   
-  //previous and next buttons appear
-  image (previous, 0, 0, 150, 125);
-  image (next, width-150, height-125, 150, 125);
+ //previous and next buttons appear
+  if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
+  image (previous, 0, 0, 150, 125); //previous button appears
+  if (mouseX > 1700 && mouseX < 2000 && mouseY > 700 && mouseY < 1000) //animation on hover
+  image(next, width-150, height-125, 150, 125); //next button appears
 
   // poem appears here
   
+
+   //coords
+textSize(24);
+text("X: "+mouseX, 0, height/4);
+text("Y: "+mouseY, 0, height/2);
 }
 
 //this resizes the canvas to the width and height of the browser window
