@@ -1,10 +1,13 @@
-var one, onestill, next, nextstill; //variables
+var one, onestill, next, nextstill, onelet, onewhen, onewhere; //variables
 
 function preload() {
   one = loadImage("images/one.gif"); //gif main image
   onestill = loadImage("images/1.jpeg"); //still main image
   next = loadImage("images/next.gif"); //gif next button
   nextstill = loadImage("images/nextstill.png"); //still next button
+  onelet = loadImage("1poemtext/1let.gif"); //second line
+  onewhen = loadImage("1poemtext/1when.gif"); //first line
+  onewhere = loadImage("1poemtext/1where.gif"); //third line
 }
 
 function setup() {
@@ -47,11 +50,18 @@ function draw() {
 
   //image (nextstill, width-150, height-125, 150, 125); //next button
    if (mouseX > 1700 && mouseX < 2000 && mouseY > 700 && mouseY < 1000) //animation on hover
-   image(next, width-150, height-125, 150, 125);
+   image(next, width-150, height-125, 150, 125); //next button appears
 
 
   // poem appears here
-  
+   if (mouseX > 780 && mouseX < 1100 && mouseY > 100 && mouseY < 190) //animation on hover
+   image(onewhen, drawX, drawY, drawW, drawH); //first line poem appears
+   if (mouseX > 660 && mouseX < 1280 && mouseY > 200 && mouseY < 290) //animation on hover
+   image(onelet, drawX, drawY, drawW, drawH); //second line poem appears
+   if (mouseX > 785 && mouseX < 1130 && mouseY > 300 && mouseY < 370) //animation on hover
+   image(onewhere, drawX, drawY, drawW, drawH); //third line poem appears
+
+  //coords
 //textSize(24);
 //text("X: "+mouseX, 0, height/4);
 //text("Y: "+mouseY, 0, height/2);
