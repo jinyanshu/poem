@@ -1,13 +1,11 @@
 //variables
-var five, fivestill, second, first, previous, next;
+var thanks, thanksstill, previous, end;
 
 function preload() {
-  five = loadImage("images/5gif.gif");
-  fivestill = loadImage("images/5.jpeg");
-  first = loadImage("5poemtext/5the.gif");
-  second = loadImage("5poemtext/5dont.gif");
+  thanks = loadImage("images/thanks.gif");
+  thanksstill = loadImage("images/thanksstill.jpeg");
   previous = loadImage("images/previous.gif");
-  next = loadImage("images/next.gif");
+  end = loadImage("images/end.gif");
 }
 
 function setup() {
@@ -18,7 +16,7 @@ function setup() {
 function draw() {
   //background
     // Create a p5 element for the background image and add width and height as methods. This allows it to always cover the canvas 
-  let imgRatio = five.width / five.height;
+  let imgRatio = thanks.width / thanks.height;
     // here you define the aspect ratio of the canvas
   let canvasRatio = width / height;
     // here you are creating variables that can be used to adjust the background image to the canvas ratio
@@ -41,21 +39,15 @@ function draw() {
   drawY = (height - drawH) / 2;
   
   //draws the image to align with the center and be as tall as the width and height of the canvas
-  image(fivestill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
-  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 320 && mouseY < 780) //animation on hover
-  image(five, drawX, drawY, drawW, drawH);
+  image(thanksstill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
+  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 200 && mouseY < 1000) //animation on hover
+  image(thanks, drawX, drawY, drawW, drawH);
   
- //previous and next button appears
+ //previous and end button appears
   if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
   image (previous, 0, 0, 150, 125); //previous button appears
   if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
-  image(next, width/1.1, height/1.2, 150, 125); //next button appears
-
-  // poem appears here
-    if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 0 && mouseY < 125) //animation on hover
-  image(first, drawX, drawY, drawW, drawH); //first line poem appears
-  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 130 && mouseY < 250) //animation on hover
-  image(second, drawX, drawY, drawW, drawH); //second line poem appears
+  image(end, width/1.1, height/1.2, 150, 125); //next button appears
 
 
 //coords
@@ -75,7 +67,7 @@ if (mouseIsPressed) {
 function go(){
   let button = dist(mouseX, mouseY, width/1.1, height/1.1); 
   if (button <= 100) {
-    window.open('thanks.html', '_self');
+    window.open('index.html', '_self');
   }
 }
 
@@ -83,7 +75,7 @@ function go(){
 function back(){
   let button = dist(mouseX, mouseY, 0, 150); 
   if (button <= 150) {
-    window.open('four.html', '_self')
+    window.open('five.html', '_self')
   }
 }
 

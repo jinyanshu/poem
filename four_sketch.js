@@ -48,7 +48,6 @@ function draw() {
  //previous and next buttons appear
   if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
   image (previous, 0, 0, 150, 125); //previous button appears
-    //  if (mouseX > 1700 && mouseX < 2000 && mouseY > 700 && mouseY < 1000) //animation on hover
   if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
   image(next, width/1.1, height/1.2, 150, 125); //next button appears
 
