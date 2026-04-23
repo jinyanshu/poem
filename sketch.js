@@ -44,7 +44,7 @@ function draw() {
   drawY = (height - drawH) / 2;
   
   image(onestill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
-   if (mouseX > 700 && mouseX < 1500 && mouseY > 500 && mouseY < 800) //animation on hover
+   if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 500 && mouseY < 800) //animation on hover
   image(one, drawX, drawY, drawW, drawH);
 
   if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover

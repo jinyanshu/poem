@@ -42,7 +42,7 @@ function draw() {
   
   //draws the image to align with the center and be as tall as the width and height of the canvas
   image(fourstill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
-  if (mouseX > 730 && mouseX < 1150 && mouseY > 250 && mouseY < 580) //animation on hover
+  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 250 && mouseY < 580) //animation on hover
   image(four, drawX, drawY, drawW, drawH);
   
  //previous and next buttons appear
@@ -53,9 +53,9 @@ function draw() {
   image(next, width/1.1, height/1.2, 150, 125); //next button appears
 
   // poem appears here
-  if (mouseX > 630 && mouseX < 1300 && mouseY > 0 && mouseY < 200) //animation on hover
+  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 0 && mouseY < 200) //animation on hover
   image(first, drawX, drawY, drawW, drawH); //first line poem appears
-  if (mouseX > 700 && mouseX < 1240 && mouseY > 645 && mouseY < 850) //animation on hover
+  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 645 && mouseY < 850) //animation on hover
   image(second, drawX, drawY, drawW, drawH); //second line poem appears
 
 //coords
