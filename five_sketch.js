@@ -52,9 +52,9 @@ function draw() {
   image(next, width/1.1, height/1.2, 150, 125); //next button appears
 
   // poem appears here
-    if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 0 && mouseY < 125) //animation on hover
+    if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 0 && mouseY < 130) //animation on hover
   image(first, drawX, drawY, drawW, drawH); //first line poem appears
-  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 130 && mouseY < 250) //animation on hover
+  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 130 && mouseY < 330) //animation on hover
   image(second, drawX, drawY, drawW, drawH); //second line poem appears
 
 
