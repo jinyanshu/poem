@@ -1,11 +1,12 @@
 //variables
-var three, threestill, first, second, previous, next;
+var three, threestill, first, second, previous, next, nextstill;
 
 function preload() {
   three = loadImage("images/3gif.gif");
   threestill = loadImage("images/3.jpeg");
   previous = loadImage("images/previous.gif");
   next = loadImage("images/next.gif");
+  nextstill = loadImage("images/nextstill.png");
   first = loadImage("3poemtext/3fert.gif");
   second = loadImage("3poemtext/3let.gif");
 }
@@ -46,10 +47,15 @@ function draw() {
   image(three, drawX, drawY, drawW, drawH);
   
  //previous and next buttons appear
+  if (frameCount >= 375) { //delay button appear
+  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height){ //animation on hover
+  image(next, width/1.1, height/1.2, 150, 125); //next button animates
+  } else {
+  image(nextstill, width/1.1, height/1.2, 150, 125); //next button appears
+  }
+}
   if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
   image (previous, 0, 0, 150, 125); //previous button appears
-  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
-  image(next, width/1.1, height/1.2, 150, 125); //next button appears
 
   // poem appears here
   if (mouseX > width/4 && mouseX < width/2 && mouseY > 70 && mouseY < 300) //animation on hover

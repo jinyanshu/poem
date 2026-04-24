@@ -1,11 +1,12 @@
 //variables
-var thanks, thanksstill, previous, end;
+var thanks, thanksstill, previous, end, endstill;
 
 function preload() {
   thanks = loadImage("images/thanks.gif");
   thanksstill = loadImage("images/thanksstill.jpeg");
   previous = loadImage("images/previous.gif");
   end = loadImage("images/end.gif");
+  endstill = loadImage("images/endstill.png");
 }
 
 function setup() {
@@ -43,11 +44,16 @@ function draw() {
   if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 200 && mouseY < 1000) //animation on hover
   image(thanks, drawX, drawY, drawW, drawH);
   
- //previous and end button appears
+ //previous and end buttons appear
+  if (frameCount >= 375) { //delay button appear
+  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height){ //animation on hover
+  image(end, width/1.1, height/1.2, 150, 125); //end button animates
+  } else {
+  image(endstill, width/1.1, height/1.2, 150, 125); //end button appears
+  }
+}
   if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
   image (previous, 0, 0, 150, 125); //previous button appears
-  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
-  image(end, width/1.1, height/1.2, 150, 125); //next button appears
 
 
 //coords

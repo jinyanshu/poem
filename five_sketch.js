@@ -1,5 +1,5 @@
 //variables
-var five, fivestill, second, first, previous, next;
+var five, fivestill, second, first, previous, next, nextstill;
 
 function preload() {
   five = loadImage("images/5gif.gif");
@@ -8,6 +8,7 @@ function preload() {
   second = loadImage("5poemtext/5dont.gif");
   previous = loadImage("images/previous.gif");
   next = loadImage("images/next.gif");
+  nextstill = loadImage("images/nextstill.png");
 }
 
 function setup() {
@@ -45,16 +46,21 @@ function draw() {
   if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 320 && mouseY < 780) //animation on hover
   image(five, drawX, drawY, drawW, drawH);
   
- //previous and next button appears
+ //previous and next buttons appear
+  if (frameCount >= 375) { //delay button appear
+  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height){ //animation on hover
+  image(next, width/1.1, height/1.2, 150, 125); //next button animates
+  } else {
+  image(nextstill, width/1.1, height/1.2, 150, 125); //next button appears
+  }
+}
   if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
   image (previous, 0, 0, 150, 125); //previous button appears
-  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
-  image(next, width/1.1, height/1.2, 150, 125); //next button appears
 
   // poem appears here
-    if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 0 && mouseY < 130) //animation on hover
+    if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 0 && mouseY < 175) //animation on hover
   image(first, drawX, drawY, drawW, drawH); //first line poem appears
-  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 130 && mouseY < 330) //animation on hover
+  if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 175 && mouseY < 330) //animation on hover
   image(second, drawX, drawY, drawW, drawH); //second line poem appears
 
 

@@ -1,4 +1,4 @@
-var one, onestill, next, onelet, onewhen, onewhere; //variables
+var one, onestill, next, onelet, onewhen, onewhere, nextstill; //variables
 
 function preload() {
   one = loadImage("images/1gif.gif"); //gif main image
@@ -7,15 +7,12 @@ function preload() {
   onelet = loadImage("1poemtext/1let.gif"); //second line
   onewhen = loadImage("1poemtext/1when.gif"); //first line
   onewhere = loadImage("1poemtext/1where.gif"); //third line
+  nextstill = loadImage("images/nextstill.png"); //still next button
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background("white");
-
-  //previous and next interaction
-  //link = createA('two.html', '<img src="images/next.gif" alt="next">');
-  //link.position(width-150, height-125);
 }
 
 function draw() {
@@ -36,7 +33,6 @@ function draw() {
     drawH = height;
     drawW = height * imgRatio;
 
-    //  image(var, 0, 0, windowWidth, windowHeight);
 }
 
 // centers the image to the canvas
@@ -44,11 +40,17 @@ function draw() {
   drawY = (height - drawH) / 2;
   
   image(onestill, drawX, drawY, drawW, drawH); //draws image to align with center and be as tall as the width and height of canvas
-   if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 500 && mouseY < 800) //animation on hover
+   if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 500 && mouseY < 800) //background animation on hover
   image(one, drawX, drawY, drawW, drawH);
 
-  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
-  image(next, width/1.1, height/1.2, 150, 125); //next button appears
+//delay button appear
+  if (frameCount >= 375) {
+  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height){ //animation on hover
+  image(next, width/1.1, height/1.2, 150, 125); //next button animates
+  } else {
+  image(nextstill, width/1.1, height/1.2, 150, 125); //still next button appears
+  }
+}
 
 
   // poem appears here

@@ -1,15 +1,16 @@
 //variables
-var two, twostill, previous, next, third, first, second;
+var two, twostill, previous, previousstill, next, nextstill, third, first, second;
 
 function preload() {
   two = loadImage("images/2gif.gif");
   twostill = loadImage("images/2.jpeg");
   previous = loadImage("images/previous.gif");
+  previousstill = loadImage("images/previousstill.png");
   next = loadImage("images/next.gif");
+  nextstill = loadImage("images/nextstill.png");
   first = loadImage("2poemtext/2bury.gif");
   second = loadImage("2poemtext/2plant.gif");
   third = loadImage("2poemtext/2a.gif");
-
 }
 
 function setup() {
@@ -34,8 +35,6 @@ function draw() {
     // if the canvas is taller than image ratio — fit to height
     drawH = height;
     drawW = height * imgRatio;
-
-    //  image(var, 0, 0, windowWidth, windowHeight);
 }
 
 // centers the image to the canvas
@@ -48,10 +47,15 @@ function draw() {
   image(two, drawX, drawY, drawW, drawH);
   
  //previous and next buttons appear
+  if (frameCount >= 375) { //delay button appear
+  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height){ //animation on hover
+  image(next, width/1.1, height/1.2, 150, 125); //next button animates
+  } else {
+  image(nextstill, width/1.1, height/1.2, 150, 125); //next button appears
+  }
+}
   if (mouseX > 0 && mouseX < 155 && mouseY > 0 && mouseY < 125) //animation on hover
   image (previous, 0, 0, 150, 125); //previous button appears
-  if (mouseX > width/1.1 && mouseX < width && mouseY > height/1.2 && mouseY < height) //animation on hover
-  image(next, width/1.1, height/1.2, 150, 125); //next button appears
 
   // poem appears here
   if (mouseX > width/3 && mouseX < width/1.5 && mouseY > 100 && mouseY < 190) //animation on hover
