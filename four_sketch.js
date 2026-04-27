@@ -1,6 +1,7 @@
 //variables
 var four, fourstill, second, first, previous, next, nextstill;
 
+//loads images
 function preload() {
   four = loadImage("images/4gif.gif");
   fourstill = loadImage("images/4.jpeg");
@@ -11,6 +12,7 @@ function preload() {
   nextstill = loadImage("images/nextstill.png");
 }
 
+//creates canvas
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background("white");
@@ -34,7 +36,6 @@ function draw() {
     drawH = height;
     drawW = height * imgRatio;
 
-    //  image(var, 0, 0, windowWidth, windowHeight);
 }
 
 // centers the image to the canvas
@@ -77,17 +78,17 @@ if (mouseIsPressed) {
 
 //function to go to next page
 function go(){
-  let button = dist(mouseX, mouseY, width/1.1, height/1.1); 
+  let button = dist(mouseX, mouseY, width/1.1, height/1.1); //button in specific press point area
   if (button <= 100) {
-    window.open('five.html', '_self');
+    window.open('five.html', '_self'); //button link to next page
   }
 }
 
 //function to go to previous page
 function back(){
-  let button = dist(mouseX, mouseY, 0, 150); 
+  let button = dist(mouseX, mouseY, 0, 150); //button in specific press point area
   if (button <= 150) {
-    window.open('three.html', '_self')
+    window.open('three.html', '_self') //button link to previous page
   }
 }
 

@@ -1,6 +1,7 @@
 //variables
 var three, threestill, first, second, previous, next, nextstill;
 
+//loads images
 function preload() {
   three = loadImage("images/3gif.gif");
   threestill = loadImage("images/3.jpeg");
@@ -11,6 +12,7 @@ function preload() {
   second = loadImage("3poemtext/3let.gif");
 }
 
+//create canvas
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background("white");
@@ -33,8 +35,6 @@ function draw() {
     // if the canvas is taller than image ratio — fit to height
     drawH = height;
     drawW = height * imgRatio;
-
-    //  image(var, 0, 0, windowWidth, windowHeight);
 }
 
 // centers the image to the canvas
@@ -70,7 +70,7 @@ function draw() {
 //text("Y: "+mouseY, 0, height/2);
 
 //next + previous page link
-if (mouseIsPressed) {
+if (mouseIsPressed) { //custom functions
   go();
   back();
 }
@@ -78,17 +78,17 @@ if (mouseIsPressed) {
 
 //function to go to next page
 function go(){
-  let button = dist(mouseX, mouseY, width/1.1, height/1.1); 
+  let button = dist(mouseX, mouseY, width/1.1, height/1.1); //button in specific press point area
   if (button <= 100) {
-    window.open('four.html', '_self');
+    window.open('four.html', '_self'); //link button to next page
   }
 }
 
 //function to go to previous page
 function back(){
-  let button = dist(mouseX, mouseY, 0, 150); 
+  let button = dist(mouseX, mouseY, 0, 150); //button in specific press point area
   if (button <= 150) {
-    window.open('two.html', '_self')
+    window.open('two.html', '_self') //link button to previous page
   }
 }
 

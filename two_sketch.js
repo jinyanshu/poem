@@ -1,6 +1,7 @@
 //variables
 var two, twostill, previous, previousstill, next, nextstill, third, first, second;
 
+//loads images
 function preload() {
   two = loadImage("images/2gif.gif");
   twostill = loadImage("images/2.jpeg");
@@ -71,7 +72,7 @@ function draw() {
 //text("Y: "+mouseY, 0, height/2);
 
 //next + previous page link
-if (mouseIsPressed) {
+if (mouseIsPressed) { //custom functions
   go();
   back();
 }
@@ -79,17 +80,17 @@ if (mouseIsPressed) {
 
 //function to go to next page
 function go(){
-  let button = dist(mouseX, mouseY, width/1.1, height/1.1); 
-  if (button <= 100) {
-    window.open('three.html', '_self');
+  let button = dist(mouseX, mouseY, width/1.1, height/1.1); //button in specific press point area
+  if (button <= 100) { //button click area
+    window.open('three.html', '_self'); //button link to next page
   }
 }
 
 //function to go to previous page
 function back(){
-  let button = dist(mouseX, mouseY, 0, 150); 
-  if (button <= 150) {
-    window.open('index.html', '_self')
+  let button = dist(mouseX, mouseY, 0, 150); //button in specific press point area
+  if (button <= 150) { //button click area
+    window.open('index.html', '_self') //button link to previous page
   }
 }
 
